@@ -16,10 +16,9 @@ export default function CreateTodo() {
                })
           })
           if(!response.ok) {
-               throw new Error("You fucked up!");
+               throw new Error("You messed up!");
           } else {
           const data = await response.json();
-          console.log(data);
           setTodos([...todos, data]);
           setNewTodo("")
           }
